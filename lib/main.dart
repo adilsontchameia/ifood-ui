@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Widgets.dart';
+
 void main() {
   runApp(IfoodFlutter());
 }
@@ -53,23 +55,9 @@ class IfoodFlutter extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 14),
               child: Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: Colors.grey.shade100,
-                      ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Prato ou Restaurante",
-                          border: InputBorder.none,
-                          prefixIcon: Icon(
-                            Icons.search,
-                            color: Colors.red,
-                          ),
-                        ),
-                      ),
-                    ),
+                  BarraPesquisa(
+                    icone: Icons.search,
+                    dizer: 'Pesquisar...',
                   ),
                   SizedBox(
                     width: 10,
@@ -233,60 +221,6 @@ class IfoodFlutter extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class ColumnCategorias extends StatelessWidget {
-  final String texto;
-  final String imagem;
-
-  const ColumnCategorias({Key key, this.texto, this.imagem}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(4),
-          child: Image.asset(
-            imagem,
-            height: 70,
-          ),
-        ),
-        Text(
-          texto,
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ],
-    );
-  }
-}
-
-class ColumnBanner extends StatelessWidget {
-  const ColumnBanner({Key key, this.imagem, this.texto}) : super(key: key);
-
-  final String imagem;
-  final String texto;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: Image.asset(
-            imagem,
-            height: 140,
-          ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text(texto),
-      ],
     );
   }
 }
