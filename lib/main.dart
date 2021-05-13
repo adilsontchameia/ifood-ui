@@ -71,6 +71,9 @@ class IfoodFlutter extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Text(
                     "Filtros",
                     style: TextStyle(
