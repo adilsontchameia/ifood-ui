@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'BottomNavigation.dart';
 import 'Widgets.dart';
 
 void main() {
@@ -174,50 +175,10 @@ class IfoodFlutter extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           elevation: 4,
           items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: Colors.black,
-              ),
-              title: Text(
-                "Inicio",
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                color: Colors.black,
-              ),
-              title: Text(
-                "Inicio",
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.receipt,
-                color: Colors.black,
-              ),
-              title: Text(
-                "Inicio",
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_outline,
-                color: Colors.black,
-              ),
-              title: Text(
-                "Inicio",
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
+            buildBottomNavigationBarItem(Icons.home, 'Inicio'),
+            buildBottomNavigationBarItem(Icons.search, 'Buscas'),
+            buildBottomNavigationBarItem(Icons.receipt, 'Pedidos'),
+            buildBottomNavigationBarItem(Icons.person_outline, 'Perfil'),
           ],
         ),
       ),
