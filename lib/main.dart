@@ -8,6 +8,7 @@ class IfoodFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.grey),
       title: "Ifood Flutter",
       home: Scaffold(
@@ -152,7 +153,7 @@ class IfoodFlutter extends StatelessWidget {
             ),
             Container(
               height: 10,
-              color: Colors.green.shade100,
+              color: Colors.grey.shade100,
             ),
             Container(
               height: 150,
@@ -182,6 +183,12 @@ class IfoodFlutter extends StatelessWidget {
                               height: 70,
                             ),
                           ),
+                          Text(
+                            "Pizza",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -196,6 +203,12 @@ class IfoodFlutter extends StatelessWidget {
                               'imagens/lanches.png',
                               height: 70,
                             ),
+                          ),
+                          Text(
+                            "Lanches",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -212,6 +225,12 @@ class IfoodFlutter extends StatelessWidget {
                               height: 70,
                             ),
                           ),
+                          Text(
+                            "Japonesa",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -227,6 +246,12 @@ class IfoodFlutter extends StatelessWidget {
                               height: 70,
                             ),
                           ),
+                          Text(
+                            "Gourmet",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                     ],
@@ -235,9 +260,13 @@ class IfoodFlutter extends StatelessWidget {
               ),
             ),
             Container(
+              height: 10,
+              color: Colors.grey.shade100,
+            ),
+            Container(
               padding: EdgeInsets.all(12),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(8),
                 child: Image.asset("imagens/gourmet.png"),
               ),
             ),
@@ -247,29 +276,49 @@ class IfoodFlutter extends StatelessWidget {
           elevation: 4,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                  color: Colors.black,
-                ),
-                label: 'Inicio'),
+              icon: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              title: Text(
+                "Inicio",
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                ),
-                label: 'Procurar'),
+              icon: Icon(
+                Icons.search,
+                color: Colors.black,
+              ),
+              title: Text(
+                "Inicio",
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.receipt,
-                  color: Colors.black,
-                ),
-                label: 'Pedidos'),
+              icon: Icon(
+                Icons.receipt,
+                color: Colors.black,
+              ),
+              title: Text(
+                "Inicio",
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person_outline,
-                  color: Colors.black,
-                ),
-                label: 'Perfil'),
+              icon: Icon(
+                Icons.person_outline,
+                color: Colors.black,
+              ),
+              title: Text(
+                "Inicio",
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
       ),
