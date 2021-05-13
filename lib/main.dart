@@ -81,6 +81,7 @@ class IfoodFlutter extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                 ),
+                //RESTAURANTES
                 child: ListView(
                   padding: EdgeInsets.only(right: 12),
                   scrollDirection: Axis.horizontal,
@@ -125,6 +126,7 @@ class IfoodFlutter extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+                  //CATEGORIAS
                   Expanded(
                       child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -163,6 +165,7 @@ class IfoodFlutter extends StatelessWidget {
               height: 10,
               color: Colors.grey.shade100,
             ),
+            //BANNER DE BAIXO
             Container(
               padding: EdgeInsets.all(12),
               child: ClipRRect(
@@ -172,6 +175,7 @@ class IfoodFlutter extends StatelessWidget {
             ),
           ],
         ),
+        //BOTTOM NAVIGATION
         bottomNavigationBar: BottomNavigationBar(
           elevation: 4,
           items: [
