@@ -96,59 +96,23 @@ class IfoodFlutter extends StatelessWidget {
                   padding: EdgeInsets.only(right: 12),
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'imagens/restaurantes-0.png',
-                            height: 140,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Entrega Gratis"),
-                      ],
+                    ColumnBanner(
+                      imagem: 'imagens/restaurantes-0.png',
+                      texto: "Aberto 24h / 24h",
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'imagens/restaurantes-1.png',
-                            height: 140,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Entrega Gratis 24/24"),
-                      ],
+                    ColumnBanner(
+                      imagem: 'imagens/restaurantes-1.png',
+                      texto: "Entrega Gratis 24/24",
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'imagens/restaurantes-2.png',
-                            height: 140,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Entrega Gratis"),
-                      ],
+                    ColumnBanner(
+                      imagem: 'imagens/restaurantes-2.png',
+                      texto: "Entrega Gratis",
                     ),
                   ],
                 ),
@@ -325,6 +289,33 @@ class IfoodFlutter extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ColumnBanner extends StatelessWidget {
+  const ColumnBanner({Key key, this.imagem, this.texto}) : super(key: key);
+
+  final imagem;
+  final texto;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.asset(
+            imagem,
+            height: 140,
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text(texto),
+      ],
     );
   }
 }
