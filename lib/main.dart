@@ -170,6 +170,7 @@ class IfoodFlutter extends StatelessWidget {
                   ),
                   Expanded(
                       child: ListView(
+                    scrollDirection: Axis.horizontal,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,6 +179,51 @@ class IfoodFlutter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(4),
                             child: Image.asset(
                               'imagens/pizza.png',
+                              height: 70,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.asset(
+                              'imagens/lanches.png',
+                              height: 70,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.asset(
+                              'imagens/japonesa.png',
+                              height: 70,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.asset(
+                              'imagens/gourmet.png',
                               height: 70,
                             ),
                           ),
