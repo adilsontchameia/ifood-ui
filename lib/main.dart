@@ -140,86 +140,30 @@ class IfoodFlutter extends StatelessWidget {
                       child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: Image.asset(
-                              'imagens/pizza.png',
-                              height: 70,
-                            ),
-                          ),
-                          Text(
-                            "Pizza",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      ColumnCategorias(
+                        imagem: 'imagens/pizza.png',
+                        texto: 'Pizza',
                       ),
                       SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: Image.asset(
-                              'imagens/lanches.png',
-                              height: 70,
-                            ),
-                          ),
-                          Text(
-                            "Lanches",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      ColumnCategorias(
+                        imagem: 'imagens/lanches.png',
+                        texto: 'Lanches',
                       ),
                       SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: Image.asset(
-                              'imagens/japonesa.png',
-                              height: 70,
-                            ),
-                          ),
-                          Text(
-                            "Japonesa",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      ColumnCategorias(
+                        imagem: 'imagens/japonesa.png',
+                        texto: 'Japonesa',
                       ),
                       SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: Image.asset(
-                              'imagens/gourmet.png',
-                              height: 70,
-                            ),
-                          ),
-                          Text(
-                            "Gourmet",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      ColumnCategorias(
+                        imagem: 'imagens/gourmet.png',
+                        texto: 'Gourmet',
                       ),
                     ],
                   )),
@@ -233,7 +177,7 @@ class IfoodFlutter extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(12),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
                 child: Image.asset("imagens/gourmet.png"),
               ),
             ),
@@ -293,11 +237,38 @@ class IfoodFlutter extends StatelessWidget {
   }
 }
 
+class ColumnCategorias extends StatelessWidget {
+  final String texto;
+  final String imagem;
+
+  const ColumnCategorias({Key key, this.texto, this.imagem}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: Image.asset(
+            imagem,
+            height: 70,
+          ),
+        ),
+        Text(
+          texto,
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+      ],
+    );
+  }
+}
+
 class ColumnBanner extends StatelessWidget {
   const ColumnBanner({Key key, this.imagem, this.texto}) : super(key: key);
 
-  final imagem;
-  final texto;
+  final String imagem;
+  final String texto;
 
   @override
   Widget build(BuildContext context) {
