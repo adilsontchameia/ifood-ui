@@ -150,6 +150,44 @@ class IfoodFlutter extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              height: 10,
+              color: Colors.green.shade100,
+            ),
+            Container(
+              height: 150,
+              padding: EdgeInsets.only(top: 12, left: 12),
+              alignment: Alignment.topLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Categorias",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Expanded(
+                      child: ListView(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.asset(
+                              'imagens/pizza.png',
+                              height: 70,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )),
+                ],
+              ),
+            ),
           ],
         ),
       ),
